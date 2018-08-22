@@ -1,0 +1,68 @@
+000010180612     A*%%TS  SD  20180612  082333  DICKJAZ     REL-V7R2M0  5770-WDS
+000020180612     A*%%EC
+000030180612     A                                      DSPSIZ(24 80 *DS3)
+000040180612     A          R SCRN01
+000050180612     A*%%TS  SD  20180612  082333  DICKJAZ     REL-V7R2M0  5770-WDS
+000060180612     A                                      CA12(12 'Previous')
+000070180612     A                                      CF01(01 'Help')
+000080180612     A                                      CF05(05 'Generate')
+000090180612     A                                  1  3DATE
+000100180612     A                                      EDTCDE(Y)
+000110180612     A                                  1 29'PHYSICAL FILE CONVERSION'
+000120180612     A                                      DSPATR(HI)
+000130180612     A                                  1 70TIME
+000140180612     A                                  2 28'Generate Excel .csv Format'
+000150180612     A                                      COLOR(RED)
+000160180612     A                                  4  3'DBase/Schema/Table:'
+000170180612     A            DBSCTBL       32A  O  4 23DSPATR(HI)
+000180180612     A                                  4 57'Format:'
+000190180612     A            FORMAT        10A  O  4 65DSPATR(HI)
+000200180612     A                                  5 10'Description:'
+000210180612     A            DESCR         50A  B  5 23DSPATR(HI)
+000220180612     A                                      DSPATR(CS)
+000230180612     A                                  7 23'Generate Headings:'
+000240180612     A            GENEXH         1A  B  7 42DSPATR(HI)
+000250180612     A                                      DSPATR(CS)
+000260180612     A                                  8 24'Column Sep. Char:'
+000270180612     A            EXCOLSEP       1A  B  8 42DSPATR(HI)
+000280180612     A                                      DSPATR(CS)
+000290180612     A                                 10 23'Conversions:'
+000300180612     A                                 11 23'Date to Character:'
+000310180612     A            CONVDATE       1A  B 11 42DSPATR(HI)
+000320180612     A                                      DSPATR(CS)
+000330180612     A                                 12 23'Time to Character:'
+000340180612     A            CONVTIME       1A  B 12 42DSPATR(HI)
+000350180612     A                                      DSPATR(CS)
+000360180612     A                                 13 23' T/S to Character:'
+000370180612     A            CONVTS         1A  B 13 42DSPATR(HI)
+000380180612     A                                      DSPATR(CS)
+000390180612     A                                 14 25'Numbers to Char:'
+000400180612     A            CONVNUM        1A  B 14 42DSPATR(HI)
+000410180612     A                                      DSPATR(CS)
+000420180612     A                                 16  3'IFS Path:'
+000430180612     A            EXCELPATH     78A  B 17  3DSPATR(HI)
+000440180612     A                                      DSPATR(CS)
+000450180612     A                                      CHECK(LC)
+000460180612     A                                 23  2'F1=Help'
+000470180612     A                                      COLOR(BLU)
+000480180612     A                                 23 11'F5=Gen Excel'
+000490180612     A                                      COLOR(BLU)
+000500180612     A                                 23 25'F12=Previous'
+000510180612     A                                      COLOR(BLU)
+000520180528     A          R MSGSFL                    SFL
+000530180528     A*%%TS  SD  20061030  115417  MORRA       REL-V5R3M0  5722-WDS
+000540180528     A                                      SFLMSGRCD(24)
+000550180528     A            MSGKEY                    SFLMSGKEY
+000560180528     A            PROGRAM                   SFLPGMQ(10)
+000570180528     A          R MSGCTL                    SFLCTL(MSGSFL)
+000580180528     A*%%TS  SD  20061030  135711  MORRA       REL-V5R3M0  5722-WDS
+000590180528     A*                                     OVERLAY
+000600180528     A                                      SFLDSP
+000610180528     A                                      SFLDSPCTL
+000620180528     A                                      SFLINZ
+000630180528     A N99                                  SFLEND
+000640180528     A                                      SFLSIZ(0002)
+000650180528     A                                      SFLPAG(0001)
+000660180528     A            PROGRAM                   SFLPGMQ(10)
+000670180528     A          R DUMMY                     ASSUME
+000680180528     A                                  1  2' '

@@ -1,0 +1,11 @@
+000100180812             PGM        /* Remove extracts for file used in file layout +
+000101180812                          processing*/
+000200180517
+000300180812             DLTF       FLOLIB/FIELDS
+000400180517             MONMSG     MSGID(CPF2105)
+000500180812             DLTF       FLOLIB/FILES
+000600180517             MONMSG     MSGID(CPF2105)
+000700180812             DLTF       FLOLIB/KEYF
+000800180517             MONMSG     MSGID(CPF2105)
+000900180513
+001000180513ENDPGM

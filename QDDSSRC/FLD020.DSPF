@@ -1,0 +1,69 @@
+000010180606     A*%%TS  SD  20180606  075605  DICKJAZ     REL-V7R2M0  5770-WDS
+000020180606     A*%%EC
+000030180606     A                                      DSPSIZ(27 132 *DS3)
+000040180606     A          R SCRN01
+000050180606     A*%%TS  SD  20180606  075605  DICKJAZ     REL-V7R2M0  5770-WDS
+000060180606     A                                      CF01(01 'Help')
+000070180606     A                                      CA12(12 'Previous')
+000080180606     A                                      CF05(05 'Run')
+000090180606     A                                      OVERLAY
+000100180606     A                                  1  3DATE
+000110180606     A                                      EDTCDE(Y)
+000120180606     A                                  1 55'PHYSICAL FILE CONVERSION'
+000130180606     A                                      DSPATR(HI)
+000140180606     A                                  1123TIME
+000150180606     A                                  2 56'Generate a XML Schema'
+000160180606     A                                      COLOR(RED)
+000170180606     A                                  4  2'DBase/Schema/Table:'
+000180180606     A            DBSCTBL       32A  O  4 22DSPATR(HI)
+000190180606     A                                  4 56'Description:'
+000200180606     A            DESCR         30A  B  4 69DSPATR(HI)
+000210180606     A                                      DSPATR(CS)
+000220180606     A                                      CHECK(LC)
+000230180606     A                                  5 14'Format:'
+000240180606     A            FORMAT        10A  O  5 22DSPATR(HI)
+000250180606     A                                  8  4'Schema Heading 1:'
+000260180606     A            XMLHEAD1      90A  B  8 22DSPATR(HI)
+000270180606     A                                      DSPATR(CS)
+000280180606     A                                      CHECK(LC)
+000290180606     A                                  9  4'Schema Heading 2:'
+000300180606     A            XMLHEAD2      90A  B  9 22DSPATR(HI)
+000310180606     A                                      DSPATR(CS)
+000320180606     A                                      CHECK(LC)
+000330180606     A                                 11  9'Schema Name:'
+000340180606     A            XMLNAME       10A  B 11 22DSPATR(HI)
+000350180606     A                                      DSPATR(CS)
+000360180606     A                                 11 34'File Extension:'
+000370180606     A            FEXTN          3A  B 11 50DSPATR(HI)
+000380180606     A                                      DSPATR(CS)
+000390180606     A                                      CHECK(LC)
+000400180606     A                                 13  9'Schema Path:'
+000410180606     A            XMLPATH       90A  B 13 22DSPATR(HI)
+000420180606     A                                      DSPATR(CS)
+000430180606     A                                 16 30'This process is to generate a temp-
+000440180606     A                                      late only and'
+000450180606     A                                 16 78'must be revised before using.  '
+000460180606     A                                      DSPATR(HI)
+000470180606     A                                 26  2'F1=Help'
+000480180606     A                                      COLOR(BLU)
+000490180606     A                                 26 11'F5=Gen. XML'
+000500180606     A                                      COLOR(BLU)
+000510180606     A                                 26 24'F12=Previous'
+000520180606     A                                      COLOR(BLU)
+000530180519     A          R MSGSFL                    SFL
+000540180519     A*%%TS  SD  20061030  115417  MORRA       REL-V5R3M0  5722-WDS
+000550180519     A                                      SFLMSGRCD(27)
+000560180519     A            MSGKEY                    SFLMSGKEY
+000570180519     A            PROGRAM                   SFLPGMQ(10)
+000580180519     A          R MSGCTL                    SFLCTL(MSGSFL)
+000590180519     A*%%TS  SD  20061030  135711  MORRA       REL-V5R3M0  5722-WDS
+000600180519     A*                                     OVERLAY
+000610180519     A                                      SFLDSP
+000620180519     A                                      SFLDSPCTL
+000630180519     A                                      SFLINZ
+000640180519     A N99                                  SFLEND
+000650180519     A                                      SFLSIZ(0002)
+000660180519     A                                      SFLPAG(0001)
+000670180519     A            PROGRAM                   SFLPGMQ(10)
+000680180519     A          R DUMMY                     ASSUME
+000690180519     A                                  1  2' '

@@ -1,0 +1,63 @@
+000010180611     A*%%TS  SD  20180611  111158  DICKJAZ     REL-V7R2M0  5770-WDS
+000020180611     A*%%EC
+000030180611     A                                      DSPSIZ(27 132 *DS3)
+000040180611     A          R SCRN01
+000050180611     A*%%TS  SD  20180611  111158  DICKJAZ     REL-V7R2M0  5770-WDS
+000060180611     A                                      CF01(01 'Help')
+000070180611     A                                      CF03(03 'Exit')
+000080180611     A                                      CF05(05 'Run')
+000090180611     A                                      OVERLAY
+000100180611     A                                  1  3DATE
+000110180611     A                                      EDTCDE(Y)
+000120180611     A                                  1 55'PHYSICAL FILE CONVERSION'
+000130180611     A                                      DSPATR(HI)
+000140180611     A                                  1123TIME
+000150180611     A                                  2 57'XML Conversion Maint.'
+000160180611     A                                      COLOR(RED)
+000170180611     A                                  6 10'Schema Heading 1:'
+000180180611     A            XMLHEAD1  R     A  B  6 28REFFLD(FLP020C/FL20C01 *LIBL/FLP020-
+000190180611     A                                      C)
+000200180611     A                                      DSPATR(HI)
+000210180611     A                                      DSPATR(CS)
+000220180611     A                                      CHECK(LC)
+000230180611     A                                  8 10'Schema Heading 2:'
+000240180611     A            XMLHEAD2  R     A  B  8 28REFFLD(FLP020C/FL20C02 *LIBL/FLP020-
+000250180611     A                                      C)
+000260180611     A                                      DSPATR(HI)
+000270180611     A                                      DSPATR(CS)
+000280180611     A                                      CHECK(LC)
+000290180611     A                                 10 12'File Extension:'
+000300180611     A            FEXTN     R     A  B 10 28REFFLD(FLP020C/FL20C04 *LIBL/FLP020-
+000310180611     A                                      C)
+000320180611     A                                      DSPATR(HI)
+000330180611     A                                      DSPATR(CS)
+000340180611     A                                      CHECK(LC)
+000350180611     A                                 12 15'Schema Path:'
+000360180611     A            XMLPATH   R     A  B 12 28REFFLD(FLP020C/FL20C03 *LIBL/FLP020-
+000370180611     A                                      C)
+000380180611     A                                      DSPATR(HI)
+000390180611     A                                      DSPATR(CS)
+000400180611     A                                      CHECK(LC)
+000410180611     A                                 26  2'F1=Help'
+000420180611     A                                      COLOR(BLU)
+000430180611     A                                 26 11'F3=Exit'
+000440180611     A                                      COLOR(BLU)
+000450180611     A                                 26 20'F5=Update'
+000460180611     A                                      COLOR(BLU)
+000470180519     A          R MSGSFL                    SFL
+000480180519     A*%%TS  SD  20061030  115417  MORRA       REL-V5R3M0  5722-WDS
+000490180519     A                                      SFLMSGRCD(27)
+000500180519     A            MSGKEY                    SFLMSGKEY
+000510180813     A            PGMNAM                    SFLPGMQ(10)
+000520180519     A          R MSGCTL                    SFLCTL(MSGSFL)
+000530180519     A*%%TS  SD  20061030  135711  MORRA       REL-V5R3M0  5722-WDS
+000540180519     A*                                     OVERLAY
+000550180519     A                                      SFLDSP
+000560180519     A                                      SFLDSPCTL
+000570180519     A                                      SFLINZ
+000580180519     A N99                                  SFLEND
+000590180519     A                                      SFLSIZ(0002)
+000600180519     A                                      SFLPAG(0001)
+000610180813     A            PGMNAM                    SFLPGMQ(10)
+000620180519     A          R DUMMY                     ASSUME
+000630180519     A                                  1  2' '

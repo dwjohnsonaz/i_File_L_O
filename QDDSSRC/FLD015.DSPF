@@ -1,0 +1,109 @@
+000010180624     A*%%TS  SD  20180624  081818  DICKJAZ     REL-V7R2M0  5770-WDS
+000020180624     A*%%EC
+000030180624     A                                      DSPSIZ(27 132 *DS3)
+000040180624     A          R SCRN01
+000050180624     A*%%TS  SD  20180624  081818  DICKJAZ     REL-V7R2M0  5770-WDS
+000060180624     A                                      CF01(01 'Help')
+000070180624     A                                      CA12(12 'Previous')
+000080180624     A                                      CF05(05 'Run')
+000090180624     A                                      OVERLAY
+000100180624     A                                  1  3DATE
+000110180624     A                                      EDTCDE(Y)
+000120180624     A                                  1 55'PHYSICAL FILE CONVERSION'
+000130180624     A                                      DSPATR(HI)
+000140180624     A                                  1123TIME
+000150180624     A                                  2 55'Generate SQL CREATE TABLE'
+000160180624     A                                      COLOR(RED)
+000170180624     A                                  4  2'DBase/Schema/Table:'
+000180180624     A            DBSCTBL       32A  O  4 22DSPATR(HI)
+000190180624     A                                  4 56'Description:'
+000200180624     A            DESCR         30A  B  4 69DSPATR(HI)
+000210180624     A                                      DSPATR(CS)
+000220180624     A                                      CHECK(LC)
+000230180624     A                                  5 14'Format:'
+000240180624     A            FORMAT        10A  O  5 22DSPATR(HI)
+000250180624     A                                  7  5'Gen Primary Key:'
+000260180624     A            PKEYYN         1A  B  7 22DSPATR(HI)
+000270180624     A                                      DSPATR(CS)
+000280180624     A                                      VALUES(' ' 'N' 'Y')
+000290180624     A                                  7 53'SQL Table Name:'
+000300180624     A            SQLTBL        30A  B  7 69DSPATR(HI)
+000310180624     A                                      DSPATR(CS)
+000320180624     A                                      CHECK(LC)
+000330180624     A                                  8  4'Primary Key Name:'
+000340180624     A            PKEYNAM       10A  B  8 22DSPATR(CS)
+000350180624     A                                      DSPATR(HI)
+000360180624     A                                  8 57'Short Name:'
+000370180624     A            PKEYSN        10A  B  8 69DSPATR(HI)
+000380180624     A                                      DSPATR(CS)
+000390180624     A                                  9 10'Drop Table:'
+000400180624     A            DROPYN         1A  B  9 22DSPATR(HI)
+000410180624     A                                      DSPATR(CS)
+000420180624     A                                      VALUES(' ' 'N' 'Y')
+000430180624     A                                 11 12'DB2/IBMi:'
+000440180624     A            DB2            1A  B 11 22DSPATR(HI)
+000450180624     A                                      DSPATR(CS)
+000460180624     A                                      VALUES(' ' 'N' 'Y')
+000470180624     A                                 12 13'SQL Schema:'
+000480180624     A            SCHEMA        10A  B 12 25DSPATR(HI)
+000490180624     A                                      DSPATR(CS)
+000500180624     A                                 12 37'Source Lib:'
+000510180624     A            SRCLIB        10A  B 12 49DSPATR(HI)
+000520180624     A                                      DSPATR(CS)
+000530180624     A                                 12 60'(QSQLSRC)'
+000540180624     A                                 12 71'Replace:'
+000550180624     A            REPLYN         1A  B 12 80DSPATR(HI)
+000560180624     A                                      DSPATR(CS)
+000570180624     A                                 13 14'MS/SQL:'
+000580180624     A            SQLSVR         1A  B 13 22DSPATR(HI)
+000590180624     A                                      DSPATR(CS)
+000600180624     A                                 14 15'IFS Path:'
+000610180624     A            MSPATH        90A  B 14 25DSPATR(HI)
+000620180624     A                                      DSPATR(CS)
+000630180624     A                                      CHECK(LC)
+000640180624     A                                 15 14'My/SQL:'
+000650180624     A            MYSQL          1A  B 15 22DSPATR(HI)
+000660180624     A                                      DSPATR(CS)
+000670180624     A                                 16 15'IFS Path:'
+000680180624     A            MYSPATH       90A  B 16 25DSPATR(HI)
+000690180624     A                                      DSPATR(CS)
+000700180624     A                                      CHECK(LC)
+000710180624     A                                 17 14'Oracle:'
+000720180624     A            ORACLE         1A  B 17 22DSPATR(HI)
+000730180624     A                                      DSPATR(CS)
+000740180624     A                                      VALUES(' ' 'N' 'Y')
+000750180624     A                                 18 15'IFS Path:'
+000760180624     A            ORPATH        90A  B 18 25DSPATR(HI)
+000770180624     A                                      DSPATR(CS)
+000780180624     A                                      CHECK(LC)
+000790180624     A                                 21  8'The CREATE TABLE statement will be-
+000800180624     A                                       generated according to the current-
+000810180624     A                                       File/Table specification(s) select-
+000820180624     A                                      ed.'
+000830180624     A                                 22  8'This process is to generate a temp-
+000840180624     A                                      late only and'
+000850180624     A                                 22 56'must be revised before running.'
+000860180624     A                                      DSPATR(HI)
+000870180624     A                                 26  2'F1=Help'
+000880180624     A                                      COLOR(BLU)
+000890180624     A                                 26 11'F5=Gen. SQL'
+000900180624     A                                      COLOR(BLU)
+000910180624     A                                 26 24'F12=Previous'
+000920180624     A                                      COLOR(BLU)
+000930180519     A          R MSGSFL                    SFL
+000940180519     A*%%TS  SD  20061030  115417  MORRA       REL-V5R3M0  5722-WDS
+000950180519     A                                      SFLMSGRCD(27)
+000960180519     A            MSGKEY                    SFLMSGKEY
+000970180519     A            PROGRAM                   SFLPGMQ(10)
+000980180519     A          R MSGCTL                    SFLCTL(MSGSFL)
+000990180519     A*%%TS  SD  20061030  135711  MORRA       REL-V5R3M0  5722-WDS
+001000180519     A*                                     OVERLAY
+001010180519     A                                      SFLDSP
+001020180519     A                                      SFLDSPCTL
+001030180519     A                                      SFLINZ
+001040180519     A N99                                  SFLEND
+001050180519     A                                      SFLSIZ(0002)
+001060180519     A                                      SFLPAG(0001)
+001070180519     A            PROGRAM                   SFLPGMQ(10)
+001080180519     A          R DUMMY                     ASSUME
+001090180519     A                                  1  2' '

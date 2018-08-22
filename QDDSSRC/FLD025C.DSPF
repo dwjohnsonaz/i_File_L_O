@@ -1,0 +1,57 @@
+000100180611     A*%%TS  SD  20180611  112002  DICKJAZ     REL-V7R2M0  5770-WDS
+000200180611     A*%%EC
+000300180611     A                                      DSPSIZ(27 132 *DS3)
+000400180611     A          R SCRN01
+000500180611     A*%%TS  SD  20180611  112002  DICKJAZ     REL-V7R2M0  5770-WDS
+000600180611     A                                      CF01(01 'Help')
+000700180611     A                                      CA03(03 'Exit')
+000800180611     A                                      CF05(05 'Run')
+000900180611     A                                      OVERLAY
+001000180611     A                                  1  3DATE
+001100180611     A                                      EDTCDE(Y)
+001200180611     A                                  1 55'PHYSICAL FILE CONVERSION'
+001300180611     A                                      DSPATR(HI)
+001400180611     A                                  1123TIME
+001500180611     A                                  2 53'JSON Conversion Control Maint.'
+001600180611     A                                      COLOR(RED)
+001700180611     A                                  5  8'Schema Heading 1:'
+001800180611     A            JSONHEAD  R     A  B  5 26REFFLD(FLP025C/FL25C01 *LIBL/FLP025-
+001900180611     A                                      C)
+002000180611     A                                      DSPATR(HI)
+002100180611     A                                      DSPATR(CS)
+002200180611     A                                      CHECK(LC)
+002300180611     A                                  7 10'File Extension:'
+002400180611     A            FEXTN     R     A  B  7 26REFFLD(FLP025C/FL25C03 *LIBL/FLP025-
+002500180611     A                                      C)
+002600180611     A                                      DSPATR(HI)
+002700180611     A                                      DSPATR(CS)
+002800180611     A                                      CHECK(LC)
+002900180611     A                                  9 13'Script Path:'
+003000180611     A            JSONPATH  R     A  B  9 26REFFLD(FLP025C/FL25C02 *LIBL/FLP025-
+003100180611     A                                      C)
+003200180611     A                                      DSPATR(HI)
+003300180611     A                                      DSPATR(CS)
+003400180611     A                                      CHECK(LC)
+003500180611     A                                 26  2'F1=Help'
+003600180611     A                                      COLOR(BLU)
+003700180611     A                                 26 11'F3=Exit'
+003800180611     A                                      COLOR(BLU)
+003900180611     A                                 26 20'F5=Update'
+004000180611     A                                      COLOR(BLU)
+004100180519     A          R MSGSFL                    SFL
+004200180519     A*%%TS  SD  20061030  115417  MORRA       REL-V5R3M0  5722-WDS
+004300180519     A                                      SFLMSGRCD(27)
+004400180519     A            MSGKEY                    SFLMSGKEY
+004500180813     A            PGMNAM                    SFLPGMQ(10)
+004600180519     A          R MSGCTL                    SFLCTL(MSGSFL)
+004700180519     A*%%TS  SD  20061030  135711  MORRA       REL-V5R3M0  5722-WDS
+004800180519     A*                                     OVERLAY
+004900180519     A                                      SFLDSP
+005000180519     A                                      SFLDSPCTL
+005100180519     A                                      SFLINZ
+005200180519     A N99                                  SFLEND
+005300180519     A                                      SFLSIZ(0002)
+005400180519     A                                      SFLPAG(0001)
+005500180813     A            PGMNAM                    SFLPGMQ(10)
+005600180519     A          R DUMMY                     ASSUME
+005700180519     A                                  1  2' '

@@ -1,0 +1,64 @@
+000010180606     A*%%TS  SD  20180606  080116  DICKJAZ     REL-V7R2M0  5770-WDS
+000020180606     A*%%EC
+000030180606     A                                      DSPSIZ(24 80 *DS3)
+000040180517     A          R SCRN01E
+000050180517     A*%%TS  SD  20180517  113350  DICKJAZ     REL-V7R2M0  5770-WDS
+000060180517     A                                  2 33'Make a Selection'
+000070180517     A                                      DSPATR(HI)
+000080180606     A          R SCRN01
+000090180606     A*%%TS  SD  20180606  080116  DICKJAZ     REL-V7R2M0  5770-WDS
+000100180606     A                                      CA03(03 'Exit')
+000110180606     A                                      OVERLAY
+000120180606     A                                  1  3DATE
+000130180606     A                                      EDTCDE(Y)
+000140180606     A                                  1 32'FILE/TABLE LAYOUTS'
+000150180606     A                                      DSPATR(HI)
+000160180606     A                                  1 70TIME
+000170180606     A                                  5 29'File. . . .'
+000180180606     A            FILES         10A  I  5 41DSPATR(HI)
+000190180606     A                                      DSPATR(CS)
+000200180606     A                                  5 54'Name, *generic*, *ALL'
+000210180606     A                                  6 31'Record Fmt '
+000220180606     A            RFMTIN        10A  I  6 43DSPATR(HI)
+000230180606     A                                      DSPATR(CS)
+000240180606     A                                  6 56'Name, blank = all/first'
+000250180606     A                                  7 29'Library . .'
+000260180606     A            LIBR          10A  I  7 41DSPATR(HI)
+000270180606     A                                      DSPATR(CS)
+000280180606     A                                  9 29'Excel/.csv:'
+000290180606     A            EXCELYN        1A  I  9 41DSPATR(HI)
+000300180606     A                                      DSPATR(CS)
+000310180606     A                                      VALUES(' ' 'N' 'Y')
+000320180606     A                                 10 27'Generate SQL:'
+000330180606     A            SQLYN          1A  I 10 41DSPATR(CS)
+000340180606     A                                      DSPATR(HI)
+000350180606     A                                      VALUES(' ' 'N' 'Y')
+000360180606     A                                 11 27'Generate XML:'
+000370180606     A            XMLYN          1A  I 11 41DSPATR(CS)
+000380180606     A                                      DSPATR(HI)
+000390180606     A                                      VALUES(' ' 'N' 'Y')
+000400180606     A                                 12 26'Generate JSON:'
+000410180606     A            JSONYN         1A  I 12 41DSPATR(HI)
+000420180606     A                                      DSPATR(CS)
+000430180606     A                                      VALUES(' ' 'N' 'Y')
+000440180606     A                                 23  2'F1=Help'
+000450180606     A                                      COLOR(BLU)
+000460180606     A                                 23 11'F3=Exit'
+000470180606     A                                      COLOR(BLU)
+000480180514     A          R MSGSFL                    SFL
+000490180514     A*%%TS  SD  20061030  115417  MORRA       REL-V5R3M0  5722-WDS
+000500180514     A                                      SFLMSGRCD(24)
+000510180514     A            MSGKEY                    SFLMSGKEY
+000520180514     A            PROGRAM                   SFLPGMQ(10)
+000530180514     A          R MSGCTL                    SFLCTL(MSGSFL)
+000540180514     A*%%TS  SD  20061030  135711  MORRA       REL-V5R3M0  5722-WDS
+000550180514     A*                                     OVERLAY
+000560180514     A                                      SFLDSP
+000570180514     A                                      SFLDSPCTL
+000580180514     A                                      SFLINZ
+000590180514     A N99                                  SFLEND
+000600180514     A                                      SFLSIZ(0002)
+000610180514     A                                      SFLPAG(0001)
+000620180514     A            PROGRAM                   SFLPGMQ(10)
+000630180514     A          R DUMMY                     ASSUME
+000640180514     A                                  1  2' '

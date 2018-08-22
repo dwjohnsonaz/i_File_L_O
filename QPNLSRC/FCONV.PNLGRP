@@ -1,0 +1,328 @@
+000100000000.*******************************************************************
+000200000000.*
+000300180517.*  Part name:    FCONV
+000400000000.*
+000500180517.*  Source file:  QPNLSRC in library DJIBMI
+000600000000.*
+000700180517.*  Function:     Source for menu FCOMV
+000800000000.*                To allow for multiple panel menu options
+000900000000.*
+001000000000.*******************************************************************
+001100000000.* -----------------------------------------------------------------
+001200000000.*
+001300000000.* Beginning of menu source.
+001400000000.*
+001500000000.* Enable access to OS/400 index search when help is displayed for
+001600000000.* this menu.
+001700000000.* -----------------------------------------------------------------
+001800000000:PNLGRP   HLPSHELF=list
+001900000000          DFTMSGF=qcpfmsg
+002000000000          SUBMSGF=qcpfmsg.
+002100000000.*
+002200000000.* -----------------------------------------------------------------
+002300000000.* Copyright statement appears when the menu is initially displayed.
+002400000000.* -----------------------------------------------------------------
+002500000000:COPYR.
+002600180517(C) COPYRIGHT SH&B, 2018.
+002700000000.*
+002800000000.* -----------------------------------------------------------------
+002900000000.* UIM Z-variable to be used as the panel identifier
+003000000000.* -----------------------------------------------------------------
+003100000000:VAR      NAME=ZMENU.
+003200000000.*
+003300000000.* -----------------------------------------------------------------
+003400000000.* Define keys for the menu
+003500000000.* -----------------------------------------------------------------
+003600000000:KEYL     NAME=menukeys
+003700000000          HELP=keyl.
+003800000000:KEYI     KEY=F1
+003900000000          HELP=helpf1
+004000000000          ACTION=HELP.
+004100000000:KEYI     KEY=F3
+004200000000          HELP=exit
+004300000000          ACTION='EXIT SET'
+004400000000          VARUPD=NO.
+004500000000F3=Exit
+004600000000:KEYI     KEY=F4
+004700000000          HELP=prompt
+004800000000          ACTION=PROMPT.
+004900000000F4=Prompt
+005000000000:KEYI     KEY=F9
+005100000000          HELP=retrieve
+005200000000          ACTION=RETRIEVE.
+005300000000F9=Retrieve
+005400000000:KEYI     KEY=F12
+005500000000          HELP=cancel
+005600000000          ACTION='CANCEL SET'
+005700000000          VARUPD=NO.
+005800000000F12=Cancel
+005900000000:KEYI     KEY=F24
+006000000000          HELP=morekeys
+006100000000          ACTION=MOREKEYS.
+006200000000F24=More keys
+006300000000:KEYI     KEY=ENTER
+006400000000          HELP=enter
+006500000000          ACTION=ENTER.
+006600000000:KEYI     KEY=HELP
+006700000000          HELP=help
+006800000000          ACTION=HELP.
+006900000000:KEYI     KEY=HOME
+007000000000          HELP=home
+007100000000          ACTION=HOME.
+007200000000:KEYI     KEY=PAGEDOWN
+007300000000          HELP=pagedown
+007400000000          ACTION=PAGEDOWN.
+007500000000:KEYI     KEY=PAGEUP
+007600000000          HELP=pageup
+007700000000          ACTION=PAGEUP.
+007800000000:KEYI     KEY=PRINT
+007900000000          HELP=print
+008000000000          ACTION=PRINT.
+008100000000:EKEYL.
+008200000000.*
+008300000000.* -----------------------------------------------------------------
+008400000000.* Define Example Menu panel
+008500000000.* -----------------------------------------------------------------
+008600180517:PANEL    NAME=FCONV
+008700180517          HELP='FCONV/help'
+008800000000          KEYL=menukeys
+008900000000          ENTER='MSG CPD9817 QCPFMSG'
+009000000000          PANELID=ZMENU
+009100000000          TOPSEP=SYSNAM.
+009200180517File/Table Layouts and Conversions
+009300000000.*
+009400000000.* -------------------------------------
+009500000000.* Define the menu area
+009600000000.* -------------------------------------
+009700000000:MENU     DEPTH='*'
+009800000000          SCROLL=YES
+009900000000          BOTSEP=SPACE.
+010000000000:TOPINST.Select one of the following:
+010100000000.*
+010200000000.* -------------------------------------
+010300000000.* Specify the action to be taken for each option
+010400000000.* -------------------------------------
+010500000000:MENUI    OPTION=1
+010600180517          ACTION='CMD FLO'
+010700000000          HELP='menu/option1'.
+010800180517Select Files/Tables
+010900000000.*
+011000000000:MENUI    OPTION=2
+011100180517          ACTION='CMD EXCEL'
+011200000000          HELP='menu/option2'.
+011300180517Maintain Excel Heading/Format
+011400000000.*
+011500000000:MENUI    OPTION=3
+011600180517          ACTION='CMD SQLCTL'
+011700000000          HELP='menu/option3'.
+011800180517Maintain SQL Heading/Format
+011900000000.*
+012000000000:MENUI    OPTION=4
+012100180517          ACTION='CMD XMLCTL'
+012200000000          HELP='menu/option4'.
+012300180517Maintain XML Heading/Format
+012400000000.*
+012500000000:MENUI    OPTION=5
+012600180517          ACTION='CMD JSONCTL'
+012700000000          HELP='menu/option5'.
+012800180517Maintain JSON Heading/Format
+012900000000.*
+013000000000:MENUI    OPTION=90
+013100000000          ACTION='CMD signoff'
+013200000000          HELP='menu/option90'.
+013300000000Sign off
+013400000000.*
+013500000000:EMENU.
+013600000000.*
+013700000000.* -------------------------------------
+013800000000.* Use a command line and allow commands and option numbers
+013900000000.* -------------------------------------
+014000000000:CMDLINE  SIZE=LONG.
+014100000000Selection or command
+014200000000.*
+014300000000:EPANEL.
+014400000000.*
+014500000000.*
+014600000000.* -----------------------------------------------------------------
+014700000000.* Define help modules for the menu panel
+014800000000.* -----------------------------------------------------------------
+014900000000:HELP     NAME=keyl.
+015000000000Function Keys - Help
+015100000000:XH3.Function keys
+015200000000:EHELP.
+015300000000.*
+015400000000:HELP     NAME=helpf1.
+015500000000:PARML.
+015600000000:PT.F1=Help
+015700000000:PD.
+015800000000Provides additional information about using the display or a
+015900000000specific field on the display.
+016000000000:EPARML.
+016100000000:EHELP.
+016200000000.*
+016300000000:HELP     NAME=exit.
+016400000000:PARML.
+016500000000:PT.F3=Exit
+016600000000:PD.
+016700000000Ends the current task and returns to the display from which the
+016800000000task was started.
+016900000000:EPARML.
+017000000000:EHELP.
+017100000000.*
+017200000000:HELP     NAME=prompt.
+017300000000:PARML.
+017400000000:PT.F4=Prompt
+017500000000:PD.
+017600000000Provides assistance in entering or selecting a command.
+017700000000:EPARML.
+017800000000:EHELP.
+017900000000.*
+018000000000:HELP     NAME=retrieve.
+018100000000:PARML.
+018200000000:PT.F9=Retrieve
+018300000000:PD.
+018400000000Displays the last command you entered on the command line and
+018500000000any parameters you included.  Pressing this key once, shows the
+018600000000last command you ran.  Pressing this key twice, shows the
+018700000000command you ran before that and so on.
+018800000000:EPARML.
+018900000000:EHELP.
+019000000000.*
+019100000000:HELP     NAME=cancel.
+019200000000:PARML.
+019300000000:PT.F12=Cancel
+019400000000:PD.
+019500000000Returns to the previous menu or display.
+019600000000:EPARML.
+019700000000:EHELP.
+019800000000.*
+019900000000:HELP     NAME=morekeys.
+020000000000:PARML.
+020100000000:PT.F24=More keys
+020200000000:PD.
+020300000000Shows additional function keys.
+020400000000:EPARML.
+020500000000:EHELP.
+020600000000.*
+020700000000:HELP     NAME=enter.
+020800000000:PARML.
+020900000000:PT.Enter
+021000000000:PD.
+021100000000Submits information on the display for processing.
+021200000000:EPARML.
+021300000000:EHELP.
+021400000000.*
+021500000000:HELP     NAME=help.
+021600000000:PARML.
+021700000000:PT.Help
+021800000000:PD.
+021900000000Provides additional information about using the display.
+022000000000:EPARML.
+022100000000:EHELP.
+022200000000.*
+022300000000:HELP     NAME=home.
+022400000000:PARML.
+022500000000:PT.Home
+022600000000:PD.
+022700000000Goes to the menu that was shown after you signed on the system.
+022800000000This menu is either the initial menu defined in your user
+022900000000profile or the menu you requested from the Sign-On display.
+023000000000:EPARML.
+023100000000:EHELP.
+023200000000.*
+023300000000:HELP     NAME=pagedown.
+023400000000:PARML.
+023500000000:PT.Page Down (Roll Up)
+023600000000:PD.
+023700000000Moves forward to show additional information for this display.
+023800000000:EPARML.
+023900000000:EHELP.
+024000000000.*
+024100000000:HELP     NAME=pageup.
+024200000000:PARML.
+024300000000:PT.Page Up (Roll Down)
+024400000000:PD.
+024500000000Moves backward to show additional information for this display.
+024600000000:EPARML.
+024700000000:EHELP.
+024800000000.*
+024900000000:HELP     NAME=print.
+025000000000:PARML.
+025100000000:PT.Print
+025200000000:PD.
+025300000000Prints information currently shown on the display.
+025400000000:EPARML.
+025500000000:EHELP.
+025600000000.*
+025700180517:HELP     NAME='FCONV/help'.
+025800000000Example Menu - Help
+025900000000:P.
+026000000000The Example Menu shows an example of a menu created using the UIM.
+026100000000:XH3.
+026200000000How to Use a Menu
+026300000000:P.
+026400000000To select a menu option, type the option number and press Enter.
+026500000000:P.
+026600000000To run a command, type the command and press Enter.  For assistance
+026700000000in selecting a command, press F4 (Prompt) without typing anything.
+026800000000For assistance in entering a command, type the command and press F4
+026900000000(Prompt).  To see a previous command you entered, press F9
+027000000000(Retrieve).
+027100000000:P.
+027200000000To go to another menu, use the Go to Menu (GO) command. Type GO
+027300000000followed by the menu ID, then press the Enter key.  For example, to
+027400000000go to the User Tasks (USER) menu, type GO USER and press the Enter
+027500000000key.  The menu ID is shown in the upper left corner of the menu.
+027600000000For assistance in entering the GO command, type GO and press F4
+027700000000(Prompt).  If you do not know the entire menu name you can use a
+027800000000generic name.  For example, GO US* will show a list of all menus
+027900000000that start with US.
+028000000000:EHELP.
+028100000000.*
+028200000000:HELP     NAME='menu/option1'.
+028300000000Option 1 - Help
+028400180517:XH3.Option 1. File Layout and Conversion selections
+028500000000:P.
+028600180517Use this option to select Files/Tables for display and/or conversion
+028700000000:EHELP.
+028800000000.*
+028900000000:HELP     NAME='menu/option2'.
+029000000000Option 2 - Help
+029100180517:XH3.Option 2. Maintain Excel Headings/Formats
+029200000000:P.
+029300180517Select this option to maintain any Heading or Format scripts
+029400000000:EHELP.
+029500000000.*
+029600000000:HELP     NAME='menu/option3'.
+029700000000Option 3 - Help
+029800180517:XH3.Option 1. Maintain SQL Headings/Formats
+029900000000:P.
+030000180517Select this option to maintain SQL Heading or Formats
+030100000000:EHELP.
+030200000000.*
+030300000000:HELP     NAME='menu/option4'.
+030400000000Option 4 - Help
+030500180517:XH3.Option 2. Maintain XML Headings/Formats
+030600000000:P.
+030700180517Select this option to maintain XML heading and format scripts
+030800000000:EHELP.
+030900000000.*
+031000000000:HELP     NAME='menu/option5'.
+031100000000Option 5 - Help
+031200180517:XH3.Option 5. Maintain JSON Headings and Formats
+031300000000:P.
+031400180517Select this option to maintain JSON Heading and Format scripts
+031500000000:EHELP.
+031600000000.*
+031700000000:HELP     NAME='menu/option90'.
+031800000000Option 90 - Help
+031900000000:XH3.Option 90. Sign off
+032000000000:P.
+032100000000Select this option to end the job that you started on the
+032200000000 display station when you signed on.
+032300000000:EHELP.
+032400000000.*
+032500000000.* -----------------------------------------------------------------
+032600000000.* End of menu source
+032700000000.* -----------------------------------------------------------------
+032800000000:EPNLGRP.

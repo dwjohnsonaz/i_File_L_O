@@ -1,0 +1,79 @@
+000010180611     A*%%TS  SD  20180611  103346  DICKJAZ     REL-V7R2M0  5770-WDS
+000020180611     A*%%EC
+000030180611     A                                      DSPSIZ(27 132 *DS3)
+000040180611     A          R SCRN01
+000050180611     A*%%TS  SD  20180611  103346  DICKJAZ     REL-V7R2M0  5770-WDS
+000060180611     A                                      CF01(01 'Help')
+000070180611     A                                      CF03(03 'Exit')
+000080180611     A                                      CF05(05 'Run')
+000090180611     A                                      OVERLAY
+000100180611     A                                  1  3DATE
+000110180611     A                                      EDTCDE(Y)
+000120180611     A                                  1 55'PHYSICAL FILE CONVERSION'
+000130180611     A                                      DSPATR(HI)
+000140180611     A                                  1123TIME
+000150180611     A                                  2 61'SQL Controls'
+000160180611     A                                      COLOR(RED)
+000170180611     A                                  5 50'Gen Primary Key:'
+000180180611     A            PKEYYN         1A  B  5 67DSPATR(HI)
+000190180611     A                                      DSPATR(CS)
+000200180611     A                                      VALUES(' ' 'N' 'Y')
+000210180611     A                                  6 55'Drop Table:'
+000220180611     A            DROPYN    R     A  B  6 67REFFLD(FLP015C/FL15C01 *LIBL/FLP015-
+000230180611     A                                      C)
+000240180611     A                                      DSPATR(HI)
+000250180611     A                                      DSPATR(CS)
+000260180611     A                                      VALUES(' ' 'N' 'Y')
+000270180611     A                                  8 55'DB2/IBMi'
+000280180611     A                                  9 55'SQL Schema:'
+000290180611     A            SCHEMA    R     A  B  9 67REFFLD(FLP015C/FL15C03 *LIBL/FLP015-
+000300180611     A                                      C)
+000310180611     A                                      DSPATR(HI)
+000320180611     A                                      DSPATR(CS)
+000330180611     A                                 10 55'Source Lib:'
+000340180611     A            SRCLIB    R     A  B 10 67REFFLD(FLP015C/FL15C04 *LIBL/FLP015-
+000350180611     A                                      C)
+000360180611     A                                      DSPATR(HI)
+000370180611     A                                      DSPATR(CS)
+000380180611     A                                 10 78'(QSQLSRC)'
+000390180611     A                                 12  8'MS/SQL IFS Path:'
+000400180611     A            MSPATH    R     A  B 12 25REFFLD(FLP015C/FL15C05 *LIBL/FLP015-
+000410180611     A                                      C)
+000420180611     A                                      DSPATR(HI)
+000430180611     A                                      DSPATR(CS)
+000440180611     A                                      CHECK(LC)
+000450180611     A                                 14  8'My/SQL IFS Path:'
+000460180611     A            MYSPATH   R     A  B 14 25REFFLD(FLP015C/FL15C06 *LIBL/FLP015-
+000470180611     A                                      C)
+000480180611     A                                      DSPATR(HI)
+000490180611     A                                      DSPATR(CS)
+000500180611     A                                      CHECK(LC)
+000510180611     A                                 16  8'ORACLE IFS Path:'
+000520180611     A            ORPATH    R     A  B 16 25REFFLD(FLP015C/FL15C07 *LIBL/FLP015-
+000530180611     A                                      C)
+000540180611     A                                      DSPATR(HI)
+000550180611     A                                      DSPATR(CS)
+000560180611     A                                      CHECK(LC)
+000570180611     A                                 26  2'F1=Help'
+000580180611     A                                      COLOR(BLU)
+000590180611     A                                 26 11'F3=Exit'
+000600180611     A                                      COLOR(BLU)
+000610180611     A                                 26 20'F5=Update'
+000620180611     A                                      COLOR(BLU)
+000630180519     A          R MSGSFL                    SFL
+000640180519     A*%%TS  SD  20061030  115417  MORRA       REL-V5R3M0  5722-WDS
+000650180519     A                                      SFLMSGRCD(27)
+000660180519     A            MSGKEY                    SFLMSGKEY
+000670180813     A            PGMNAM                    SFLPGMQ(10)
+000680180519     A          R MSGCTL                    SFLCTL(MSGSFL)
+000690180519     A*%%TS  SD  20061030  135711  MORRA       REL-V5R3M0  5722-WDS
+000700180519     A*                                     OVERLAY
+000710180519     A                                      SFLDSP
+000720180519     A                                      SFLDSPCTL
+000730180519     A                                      SFLINZ
+000740180519     A N99                                  SFLEND
+000750180519     A                                      SFLSIZ(0002)
+000760180519     A                                      SFLPAG(0001)
+000770180813     A            PGMNAM                    SFLPGMQ(10)
+000780180519     A          R DUMMY                     ASSUME
+000790180519     A                                  1  2' '

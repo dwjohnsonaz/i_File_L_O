@@ -1,0 +1,86 @@
+000100180611     A*%%TS  SD  20180611  083308  DICKJAZ     REL-V7R2M0  5770-WDS
+000200180611     A*%%EC
+000300180611     A                                      DSPSIZ(27 132 *DS3)
+000400180611     A          R SCRN01
+000500180611     A*%%TS  SD  20180611  083308  DICKJAZ     REL-V7R2M0  5770-WDS
+000600180611     A                                      CF01(01 'Help')
+000700180611     A                                      CA03(03 'Exit')
+000800180611     A                                      CF05(05 'Update')
+000900180611     A                                  1  3DATE
+001000180611     A                                      EDTCDE(Y)
+001100180611     A                                  1 55'PHYSICAL FILE CONVERSION'
+001200180611     A                                      DSPATR(HI)
+001300180611     A                                  1124TIME
+001400180611     A                                  2 55'Excel Conversion Controls'
+001500180611     A                                      COLOR(RED)
+001600180611     A                                  4  8'Spreadsheet Heading:'
+001700180611     A            GENEXD    R        B  4 29REFFLD(FLP010C/FL10C01 DJDATA/FLP01-
+001800180611     A                                      0C)
+001900180611     A                                      DSPATR(HI)
+002000180611     A                                      DSPATR(CS)
+002100180611     A                                  5 15'Heading Text:'
+002200180611     A            EXHTEXT   R     A  B  5 29REFFLD(FLP010C/FL10C02 DJDATA/FLP01-
+002300180611     A                                      0C)
+002400180611     A                                      DSPATR(HI)
+002500180611     A                                      DSPATR(CS)
+002600180611     A                                      CHECK(LC)
+002700180611     A                                  7 40'Generate Column Headings:'
+002800180611     A            GENCOLH   R     A  B  7 66REFFLD(FLP010C/FL10C03 DJDATA/FLP01-
+002900180611     A                                      0C)
+003000180611     A                                      DSPATR(HI)
+003100180611     A                                      DSPATR(CS)
+003200180611     A                                  8 48'Column Sep. Char:'
+003300180611     A            COLSEP    R     A  B  8 66REFFLD(FLP010C/FL10C04 DJDATA/FLP01-
+003400180611     A                                      0C)
+003500180611     A                                      DSPATR(HI)
+003600180611     A                                      DSPATR(CS)
+003700180611     A                                 10 47'Conversions:'
+003800180611     A                                 11 47'Date to Character:'
+003900180611     A            CONVDATE  R     A  B 11 66REFFLD(FLP010C/FL10C06 DJDATA/FLP01-
+004000180611     A                                      0C)
+004100180611     A                                      DSPATR(HI)
+004200180611     A                                      DSPATR(CS)
+004300180611     A                                 12 47'Time to Character:'
+004400180611     A            CONVTIME  R     A  B 12 66REFFLD(FLP010C/FL10C07 DJDATA/FLP01-
+004500180611     A                                      0C)
+004600180611     A                                      DSPATR(HI)
+004700180611     A                                      DSPATR(CS)
+004800180611     A                                 13 47' T/S to Character:'
+004900180611     A            CONVTS    R     A  B 13 66REFFLD(FLP010C/FL10C08 *LIBL/FLP010-
+005000180611     A                                      C)
+005100180611     A                                      DSPATR(HI)
+005200180611     A                                      DSPATR(CS)
+005300180611     A                                 14 49'Numbers to Char:'
+005400180611     A            CONVNUM   R     A  B 14 66REFFLD(FLP010C/FL10C05 *LIBL/FLP010-
+005500180611     A                                      C)
+005600180611     A                                      DSPATR(HI)
+005700180611     A                                      DSPATR(CS)
+005800180611     A                                 16 19'IFS Path:'
+005900180611     A            IFSPATH   R     A  B 16 29REFFLD(FLP010C/FL10C09 *LIBL/FLP010-
+006000180611     A                                      C)
+006100180611     A                                      DSPATR(HI)
+006200180611     A                                      DSPATR(CS)
+006300180611     A                                      CHECK(LC)
+006400180611     A                                 26  2'F1=Help'
+006500180611     A                                      COLOR(BLU)
+006600180611     A                                 26 11'F3=Exit'
+006700180611     A                                      COLOR(BLU)
+006800180611     A                                 26 20'F5=Update'
+006900180611     A                                      COLOR(BLU)
+007000180528     A          R MSGSFL                    SFL
+007100180528     A*%%TS  SD  20061030  115417  MORRA       REL-V5R3M0  5722-WDS
+007200180611     A                                      SFLMSGRCD(27)
+007300180528     A            MSGKEY                    SFLMSGKEY
+007400180813     A            PGMNAM                    SFLPGMQ(10)
+007500180528     A          R MSGCTL                    SFLCTL(MSGSFL)
+007600180528     A*%%TS  SD  20061030  135711  MORRA       REL-V5R3M0  5722-WDS
+007700180528     A*                                     OVERLAY
+007800180528     A                                      SFLDSP
+007900180528     A                                      SFLDSPCTL
+008000180528     A                                      SFLINZ
+008100180528     A N99                                  SFLEND
+008200180528     A                                      SFLSIZ(0002)
+008300180528     A                                      SFLPAG(0001)
+008400180813     A            PGMNAM                    SFLPGMQ(10)
+008500180528     A          R DUMMY                     ASSUME
+008600180528     A                                  1  2' '
